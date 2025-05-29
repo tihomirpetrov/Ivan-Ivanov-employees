@@ -1,27 +1,95 @@
-# EmployeeUi
+# Employee Overlap Calculator & EmployeeUi
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.16.
+## Description
 
-## Development server
+This project calculates how many days pairs of employees have worked together on common projects based on a CSV upload.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Supports CSV input where `DateTo` can be `NULL` (treated as today).
+- Calculates overlapping days per project between employee pairs.
+- Returns results listing Employee ID #1, Employee ID #2, Project ID, and days worked together.
+- Includes a frontend UI for CSV file upload and displaying results in a data grid.
 
-## Code scaffolding
+---
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Technologies Used
 
-## Build
+- Backend: Java Spring Boot (Java 17)
+- Frontend: Angular (version 16.2.16)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+---
 
-## Running unit tests
+## Backend - How to Run
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Clone the repository:
 
-## Running end-to-end tests
+   ```bash
+   git clone https://github.com/tihomirpetrov/Ivan-Ivanov-employees.git
+   cd Ivan-Ivanov-employees
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+2. Build and run the Spring Boot application:
+   ./mvnw spring-boot:run
 
-## Further help
+3. The backend will be available at:
+   http://localhost:8080
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+4. API endpoint for CSV upload:
+   POST http://localhost:8080/api/employees/upload
+Accepts multipart form-data with the file parameter.
+Returns JSON array with results.
+
+Frontend - How to Run
+1. Navigate to the frontend folder: 
+   cd frontend
+2. Install dependencies:
+   npm install
+3. Run the development server:
+   ng serve
+4. Open your browser at:
+   http://localhost:4200
+5. Use the UI to select and upload a CSV file. The results will be displayed in the table.
+
+Angular CLI Commands
+
+    Development server:
+    Run ng serve for a live reload dev server at http://localhost:4200/.
+
+    Generate components/services/etc:
+    Run ng generate component component-name.
+
+    Build project:
+    Run ng build to build the production artifacts into the dist/ folder.
+
+    Run unit tests:
+    Run ng test to execute tests with Karma.
+
+    Run end-to-end tests:
+    Run ng e2e to execute end-to-end tests. (Requires additional setup.)
+
+    Help:
+    Run ng help or visit the Angular CLI documentation.
+
+Usage Instructions
+
+    Prepare a CSV file with employee project data, ensuring the DateTo field can be empty or NULL to indicate ongoing projects.
+
+    Start backend and frontend servers.
+
+    Upload the CSV file via the frontend UI.
+
+    View pairs of employees who worked together, their common projects, and total days worked together.
+
+Possible Improvements
+
+    Support multiple date formats during CSV parsing.
+
+    Enhance frontend with loading spinners and error handling.
+
+    Validate CSV file format before upload.
+
+    Persist results in a database for future queries.
+
+    Add comprehensive backend and frontend tests.
+
+License
+
+This project is licensed under the MIT License.
