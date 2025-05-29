@@ -49,6 +49,25 @@ form {
   }
 }
 
+.loading-spinner {
+  text-align: center;
+  margin: 20px 0;
+  font-weight: bold;
+  color: #007bff;
+  font-size: 16px;
+}
+
+.error-message {
+  text-align: center;
+  margin: 15px 0;
+  padding: 10px;
+  background-color: #ffe0e0;
+  border: 1px solid #ff6b6b;
+  border-radius: 4px;
+  color: #b00020;
+  font-weight: 500;
+}
+
 .results-table {
   width: 100%;
   border-collapse: collapse;
