@@ -1,0 +1,27 @@
+<div class="container">
+  <h2>Upload Employee CSV</h2>
+
+  <form (submit)="onUpload($event)" enctype="multipart/form-data">
+    <input type="file" (change)="onFileSelected($event)" accept=".csv" required />
+    <button type="submit" [disabled]="!selectedFile">Upload</button>
+  </form>
+
+  <table *ngIf="results.length > 0" class="results-table">
+    <thead>
+    <tr>
+      <th>Employee #1</th>
+      <th>Employee #2</th>
+      <th>Project ID</th>
+      <th>Days Worked</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let row of results">
+      <td data-label="Employee #1">{{ row.empId1 }}</td>
+      <td data-label="Employee #2">{{ row.empId2 }}</td>
+      <td data-label="Project ID">{{ row.projectId }}</td>
+      <td data-label="Days Worked">{{ row.daysWorked }}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
