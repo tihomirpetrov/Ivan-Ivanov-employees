@@ -1,5 +1,8 @@
 # Employee Overlap Calculator & EmployeeUi
 
+## Preview
+![Screenshot of employee overlap UI](https://github.com/user-attachments/assets/d0efad4c-2e35-4ccc-a376-b5fb755234c7)
+
 ## Description
 
 This project calculates how many days pairs of employees have worked together on common projects based on a CSV upload.
