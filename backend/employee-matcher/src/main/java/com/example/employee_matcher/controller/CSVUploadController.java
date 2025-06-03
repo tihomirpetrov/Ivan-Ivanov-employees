@@ -17,6 +17,7 @@ public class CSVUploadController {
     private EmployeeService employeeService;
 
     @PostMapping("/upload")
+    @CrossOrigin(origins = "http://localhost:4200")
     public ResponseEntity<List<ProjectWorkResult>> uploadCSV(@RequestParam("file") MultipartFile file) {
         List<ProjectWorkResult> result = employeeService.processCSV(file);
         return ResponseEntity.ok(result);
