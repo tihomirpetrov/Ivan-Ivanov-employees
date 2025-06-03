@@ -34,8 +34,8 @@ This project calculates how many days pairs of employees have worked together on
    cd Ivan-Ivanov-employees
 
 3. Build and start containers
-	```bash
-	docker-compose up --build -d
+   ```bash
+   docker-compose up --build -d
 
 4. Access the application
 	
@@ -64,7 +64,7 @@ This project calculates how many days pairs of employees have worked together on
 Accepts multipart form-data with the file parameter.
 Returns JSON array with results.
 
-Frontend - How to Run
+## Frontend - How to Run
 1. Navigate to the frontend folder: 
    cd frontend
 2. Install dependencies:
