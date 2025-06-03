@@ -40,6 +40,7 @@ This project calculates how many days pairs of employees have worked together on
 4. Access the application
 	
 	Frontend: http://localhost:4200
+	
 	Backend API: http://localhost:8080
 
 
