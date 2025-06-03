@@ -7,4 +7,4 @@ RUN npm run build --prod
 
 # Serve stage
 FROM nginx:alpine
-COPY --from=build /app/dist/your-app-name /usr/share/nginx/html
+COPY --from=build /app/dist/employee-ui /usr/share/nginx/html

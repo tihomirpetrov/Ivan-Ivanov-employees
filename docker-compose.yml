@@ -3,7 +3,7 @@ version: '3.8'
 services:
   backend:
     build:
-      context: ./backend
+      context: ./backend/employee-matcher
       dockerfile: Dockerfile
     container_name: employees-backend
     ports:
@@ -13,7 +13,7 @@ services:
 
   frontend:
     build:
-      context: ./frontend
+      context: ./frontend/employee-ui
       dockerfile: Dockerfile
     container_name: employees-frontend
     ports:
