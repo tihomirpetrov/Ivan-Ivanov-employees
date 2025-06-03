@@ -21,7 +21,30 @@ This project calculates how many days pairs of employees have worked together on
 
 ---
 
-## Backend - How to Run
+## Docker Compose Setup
+
+1. Prerequisites
+   Ensure you have installed:
+   - [Docker](https://docs.docker.com/get-docker/)
+   - [Docker Compose](https://docs.docker.com/compose/install/)
+
+2. Clone the repository
+   ```bash
+   git clone https://github.com/tihomirpetrov/Ivan-Ivanov-employees.git
+   cd Ivan-Ivanov-employees
+
+3. Build and start containers
+	```bash
+	docker-compose up --build -d
+
+4. Access the application
+	
+	Frontend: http://localhost:4200
+	Backend API: http://localhost:8080
+
+
+
+## Backend - How to Run (Manual)
 
 1. Clone the repository:
 
